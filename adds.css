@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Satisfy&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Satisfy';
+    background-image: url("sounds/music.jpg");
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    /*background-position: center;*/
+}
+.app{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1{
+    margin: 40px 0 20px 0;
+    text-align: center;
+    font-size: 65px;
+    font-weight: bolder;
+}
+header p{
+    font-size: 35px;
+}
+.pads{
+    background: #f5f5dc;
+    width: 100%;
+    display: flex;
+}
+/*selecting all the pads inside the main pads div*/
+.pads > div{
+    height: 100px;
+    width: 100px;
+    flex: 1;
+    margin-bottom: 2px;
+}
+
+.pad1{
+    background: #6cfc9d;
+}
+.pad2{
+    background: #b35549;
+}
+.pad3{
+    background: #dcdcdc;
+}
+.pad4{
+    background: #ff5fda;
+}
+.pad5{
+    background: #f7ff5f;
+}
+.pad6{
+    background: #00ffff;
+}
+
+.visual > div{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    bottom: 0;
+    left: 20%;
+    bottom: 0;
+    z-index: -1; /* hides the jump bubbles behind*/
+}
+
+@keyframes jump {
+    0%{
+        bottom: 0;
+        left: 20%;
+    }
+    50%{
+        bottom: 50%;
+        left: 50%;
+    }
+    100%{
+        bottom: 0;
+        left: 80%;
+    }
+}
